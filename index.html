@@ -24,6 +24,18 @@ h1{font-weight:800;font-size:32px;line-height:1.05;letter-spacing:-.5px}
 h1 span{display:inline-block;background:var(--red);color:#fff;padding:0 10px 4px;border-radius:10px;transform:rotate(-3deg);
  box-shadow:4px 4px 0 var(--ink);margin-top:6px;font-size:26px}
 .sub{font-size:15px;margin-top:8px;opacity:.85}
+.hero{position:relative;background:var(--paper);border:var(--line) solid var(--ink);border-radius:24px;box-shadow:8px 9px 0 var(--ink);
+ padding:16px;margin:6px 0 30px;text-align:center;animation:drop .55s cubic-bezier(.2,1.4,.4,1) .1s both;scroll-margin-top:16px}
+.hero .hpic{width:min(240px,70%);aspect-ratio:1;margin:6px auto 12px;border-radius:16px;overflow:hidden;border:2px solid var(--ink);background:#fff}
+.hero .hpic img{width:100%;height:100%;object-fit:cover;display:block}
+.hero h2{font-size:21px}
+.hero .tag{font-size:14px}
+.big{display:block;margin-top:14px;text-decoration:none;color:#fff;background:var(--red);border:var(--line) solid var(--ink);border-radius:18px;
+ padding:16px 14px 18px;font-size:22px;font-weight:800;box-shadow:5px 6px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.big b{display:inline-block;transition:transform .2s}
+.big:hover b,.big:focus-visible b{transform:translateX(5px)}
+.big:active{transform:translate(3px,3px);box-shadow:2px 3px 0 var(--ink)}
+.big:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 .how{background:var(--ink);color:var(--yel);border-radius:16px;padding:12px 14px;font-size:15px;line-height:1.45;margin:4px 0 22px;
  position:relative}
 .how::after{content:"";position:absolute;left:28px;bottom:-9px;border:10px solid transparent;border-top-color:var(--ink);border-bottom:0}
@@ -68,23 +80,18 @@ footer nav a{color:var(--ink);border:2px solid var(--ink);border-radius:999px;pa
     <img src="img/logo.png" alt="โลโก้ ของเด็ดหลักร้อย" width="84" height="84">
     <div><h1>ของเด็ด<br><span>หลักร้อย</span></h1><p class="sub">ลิงก์สินค้าจากคลิปทั้งหมดอยู่ที่นี่</p></div>
   </header>
-  <p class="how">ดูคลิปไหนมา หา<b>เลข #</b> หรือชื่อสินค้าให้ตรงคลิป แล้วกด <b>ดูที่ Shopee</b> ได้เลย 👇</p>
+  
+  <section class="hero" id="p06">
+    <span class="code">#06</span><span class="new">คลิปล่าสุด</span>
+    <div class="hpic"><img src="img/civago.jpg" alt="แก้วเก็บอุณหภูมิ CIVAGO 26 ออนซ์" width="480" height="480" loading="eager"></div>
+    <h2>แก้วเก็บอุณหภูมิ CIVAGO 26 ออนซ์</h2>
+    <p class="tag">ซับในเซรามิก · มีหลอด · มี 6 สี</p>
+    <a class="big" href="https://s.shopee.co.th/2VtKNYhuWm" rel="sponsored noopener" target="_blank">🛒 เช็กราคาที่ Shopee <b>→</b></a>
+  </section>
+  <p class="how">คลิปก่อนหน้า: หา<b>เลข #</b> ให้ตรงคลิปที่ดู แล้วกด <b>เช็กราคาที่ Shopee</b> 👇</p>
   <main class="list">
-  <article class="card" style="--tilt:-2.2deg;--d:0.15s" id="p06">
-    <span class="code">#06</span>
-    <span class="new">ใหม่ล่าสุด</span>
-    <div class="pic"><img src="img/civago.jpg" alt="แก้วเก็บอุณหภูมิ CIVAGO 26 ออนซ์" width="480" height="480" loading="eager"></div>
-    <div class="body">
-      <h2>แก้วเก็บอุณหภูมิ CIVAGO 26 ออนซ์</h2>
-      <p class="tag">ซับในเซรามิก · มีหลอด · มี 6 สี</p>
-      <div class="row">
-        <a class="go" href="https://s.shopee.co.th/2VtKNYhuWm" rel="sponsored noopener" target="_blank">เช็กราคาที่ Shopee <b>→</b></a>
-      </div>
-    </div>
-  </article>
   <article class="card" style="--tilt:1.6deg;--d:0.23s" id="p05">
     <span class="code">#05</span>
-    
     <div class="pic"><img src="img/acmic.jpg" alt="พาวเวอร์แบงก์ 20,000mAh สาย+ปลั๊กในตัว" width="480" height="480" loading="eager"></div>
     <div class="body">
       <h2>พาวเวอร์แบงก์ 20,000mAh สาย+ปลั๊กในตัว</h2>
@@ -96,8 +103,7 @@ footer nav a{color:var(--ink);border:2px solid var(--ink);border-radius:999px;pa
   </article>
   <article class="card" style="--tilt:-1.2deg;--d:0.31s" id="p04">
     <span class="code">#04</span>
-    
-    <div class="pic"><img src="img/venita.jpg" alt="กันแดด Venita SPF50 PA+++" width="480" height="480" loading="lazy"></div>
+    <div class="pic"><img src="img/venita.jpg" alt="กันแดด Venita SPF50 PA+++" width="480" height="480" loading="eager"></div>
     <div class="body">
       <h2>กันแดด Venita SPF50 PA+++</h2>
       <p class="tag">สูตร Anti-Acne Care · เนื้อครีมเจล</p>
@@ -108,7 +114,6 @@ footer nav a{color:var(--ink);border:2px solid var(--ink);border-radius:999px;pa
   </article>
   <article class="card" style="--tilt:2.0deg;--d:0.39s" id="p03">
     <span class="code">#03</span>
-    
     <div class="pic"><img src="img/xit.jpg" alt="ไม้เซลฟี่ + ขาตั้ง 1.3 ม. มีรีโมท" width="480" height="480" loading="lazy"></div>
     <div class="body">
       <h2>ไม้เซลฟี่ + ขาตั้ง 1.3 ม. มีรีโมท</h2>
@@ -120,7 +125,6 @@ footer nav a{color:var(--ink);border:2px solid var(--ink);border-radius:999px;pa
   </article>
   <article class="card" style="--tilt:-1.8deg;--d:0.47s" id="p02">
     <span class="code">#02</span>
-    
     <div class="pic"><img src="img/seagull.jpg" alt="เครื่องบดสับไร้สาย Seagull 250 มล." width="480" height="480" loading="lazy"></div>
     <div class="body">
       <h2>เครื่องบดสับไร้สาย Seagull 250 มล.</h2>
@@ -132,7 +136,6 @@ footer nav a{color:var(--ink);border:2px solid var(--ink);border-radius:999px;pa
   </article>
   <article class="card" style="--tilt:-2.2deg;--d:0.55s" id="p01">
     <span class="code">#01</span>
-    
     <div class="pic"><img src="img/charger.jpg" alt="หัวชาร์จ PD 30W + สาย Lightning" width="480" height="480" loading="lazy"></div>
     <div class="body">
       <h2>หัวชาร์จ PD 30W + สาย Lightning</h2>
@@ -145,7 +148,7 @@ footer nav a{color:var(--ink);border:2px solid var(--ink);border-radius:999px;pa
   </main>
   <footer>
     <p class="disc">หน้านี้มีลิงก์ Affiliate · เราอาจได้ค่าคอมมิชชันเมื่อสั่งซื้อผ่านลิงก์ (ราคาของผู้ซื้อเท่าเดิม)<br>ราคาและโปรโมชันเปลี่ยนได้ตลอด ดูราคาจริงในแอป Shopee ก่อนสั่งซื้อ</p>
-    <nav><a href="https://www.facebook.com/profile.php?id=61596223366801" rel="noopener" target="_blank">Facebook</a><a href="https://www.youtube.com/channel/UCAqWR0_eQBI4zToBHPx0Hew" rel="noopener" target="_blank">YouTube</a></nav>
+    <nav><a href="https://www.facebook.com/profile.php?id=61596223366801" rel="noopener" target="_blank">Facebook</a><a href="https://www.youtube.com/channel/UCAqWR0_eQBI4zToBHPx0Hew" rel="noopener" target="_blank">YouTube</a><a href="https://www.tiktok.com/@kongded.th" rel="noopener" target="_blank">TikTok</a></nav>
   </footer>
 </div>
 </body>
